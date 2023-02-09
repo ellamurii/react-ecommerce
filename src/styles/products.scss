@@ -1,0 +1,29 @@
+.products-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80vw;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-card {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 65%;
+        object-fit: cover;
+    }
+
+    .info {
+        flex: 1;
+    }
+}
