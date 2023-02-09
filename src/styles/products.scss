@@ -1,7 +1,7 @@
 .products-grid {
     margin-top: 30px;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 60px 20px;
     grid-template-columns: 1fr 1fr 1fr;
     width: 80vw;
     max-width: 900px;
@@ -24,6 +24,43 @@
     }
 
     .info {
+        display: flex;
+        flex-direction: column;
         flex: 1;
+    }
+
+    .title,
+    .price {
+        font-weight: 700;
+    }
+
+    .date {
+        font-size: 12px;
+        color: $tertiary-text;
+        font-weight: 700;
+
+    }
+
+    .price-wrapper {
+        display: flex;
+        align-items: flex-end;
+        flex: 1;
+        
+        > div {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .discount {
+            background-color: $warning-color;
+            color: $secondary-text;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin-left: 10px;
+            font-weight: 700;
+            font-size: 14px;
+        }
     }
 }
