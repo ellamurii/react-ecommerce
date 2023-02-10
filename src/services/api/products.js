@@ -4,7 +4,7 @@ import { formatMoney } from './utils/numberFormats';
 
 const PATH = 'products';
 
-const get = async (page = 0, limit = 15, sort = 'price') => {
+const get = async (page = 0, sort = 'price', limit = 9) => {
     const result = await fetch(`${APP.API_URI}/${PATH}?_page=${page}&_limit=${limit}&_sort=${sort}`)
         .then((response) => response.json())
         .then((data) => data?.map((product) => ({
