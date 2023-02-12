@@ -1,6 +1,6 @@
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, isLast }) => {
   return (
-    <div className="product-card">
+    <div className={`product-card ${isLast ? 'last' : ''}`}>
       <img src={product.thumbnail} alt={product.title} />
       <div className="info">
         <p className="date">{product.dateRelative}</p>

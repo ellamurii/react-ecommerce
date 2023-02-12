@@ -6,9 +6,12 @@
   margin-right: auto;
 
   .products-grid {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
     grid-gap: 60px 20px;
-    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .product-card {
@@ -19,6 +22,14 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    @media only screen and (min-device-width: 768px){
+      width: 30%;
+    }
+
+    &.last {
+      margin-right: auto;
+    }
 
     img {
       width: 100%;
@@ -91,5 +102,13 @@
       padding: 5px;
       border-radius: 8px;
     }
+  }
+
+  .end {
+    color: $tertiary-text;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 25px;
+    font-size: 14px;
   }
 }
